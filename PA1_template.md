@@ -145,9 +145,31 @@ Calculate mean and median of steps per day
 
 ```r
 meanSteps2 <- mean(daily_steps2$steps)
+mean(daily_steps2$steps)
+```
+
+```
+## [1] 10766.19
+```
+
+```r
 medianSteps2 <- median(daily_steps2$steps)
+median(daily_steps2$steps)
+```
+
+```
+## [1] 10766.19
+```
+
+```r
 library(xtable)
-result <- data.frame(c(meanSteps, medianSteps), c(meanSteps2, medianSteps2))
+data.frame(c(meanSteps, medianSteps), c(meanSteps2, medianSteps2))
+```
+
+```
+##   c.meanSteps..medianSteps. c.meanSteps2..medianSteps2.
+## 1                  10766.19                    10766.19
+## 2                  10765.00                    10766.19
 ```
 The replacement of missing values with the mean, doesn't have much effect on histogram, mean and median.
 
